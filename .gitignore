@@ -1,0 +1,72 @@
+
+# Traces and system temporary files
+####################
+apps/webapp/temp/
+apps/webapp/trace/
+apps/webapp/static/adwords_csv/
+
+# Environment dirs #
+####################
+.env
+.env*/
+.idea/
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.pyc
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+#*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+*.autosave
+
+# CACHE IGNORE
+*CACHE*
+
+# Dev ignore rules
+.ropeproject/
+proext.todo.org
+
+# gedit backup files
+*~
+
+# pydev files
+.project
+.pydevproject
+
+# sublime files
+.settings/
+*.vagrant
+*.swp
+emulator.json
+
+*.sublime-project
+*.sublime-workspace
