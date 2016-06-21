@@ -63,7 +63,21 @@ def wait_for(step, selector):
 def wait_for(step):
     for handle in world.browser.window_handles:
         world.browser.switch_to_window(handle)
-    # world.browser.switch_to_window(windowName)
-    # element = world.browser.find_element_by_name("frameName")
-    # WebDriverWait(world.browser, 200).until(
-    #     world.browser.switch_to_window("frameName"))
+
+
+
+
+@step('"(.*)" to be clickable')
+def wait_for(step,selector):
+    WebDriverWait(world.browser, 100).until(
+        EC.element_to_be_clickable((By.CSS_SELECTOR, selector))
+    )
+
+
+@step(r'See the project "(.*)" in list')
+def have_project(step, project_name):
+    world.browser.find_element_by_name('project_name')
+# def have_project(step, project_name):
+#     project_href = world.browser.find_element_by_css_selector('.chzn-results').find_element_by_tag_name('li')
+#     assert project_href.text == project_name
+
