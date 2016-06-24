@@ -15,11 +15,6 @@ Feature: CreateProjects
       And Fill "#project-input-0" with "VK.autotest"
       And Click the button ".submit-form"
       And Switch to new window opened
-#      And Click the button "[name='project[yandex_client]']"
-#      And Wait appearance "[name='project[yandex_client]']"
-#      And Wait disappearance ".progress-bar"
-#      And Click "[name='project[yandex_client]']:first-of-type"
-#      And Click the button ".submit-form"
       And Wait appearance "#login"
       And Fill "#login" with "VK.autotest"
       And Fill "#passwd" with "314159265"
@@ -43,10 +38,14 @@ Feature: CreateProjects
       And Wait disappearance ".progress-bar"
       And Click ".js-profile-value:first-of-type"
       And Click the button ".submit-form"
-      And Wait disappearance ".progress-bar"
-      And ".submit-form" to be clickable
+#      And Wait disappearance ".progress-bar"
+      And Wait appearance ".goal-name-placeholder"
+#    _______________
+#      And ".submit-form" to be clickable
+#    в этом месте похоже слишком рано кликает на кнопку, в то время каак она не рбочая.
+#      And Wait appearance ".submit-form:not([disabled])"
       And Click the button ".submit-form"
-      And Wait disappearance ".progress-bar"
+#      And Wait disappearance ".progress-bar"
       And Wait appearance "[name=utm_medium]"
       And Click the button ".submit-form"
       And Wait disappearance ".progress-bar"
@@ -59,7 +58,9 @@ Feature: CreateProjects
 
 
 #      And Wait appearance ".logo"
-      And Click the button ".logo"
-      And Wait disappearance ".progress-bar"
+#    ________________________
+#      And Click the button ".logo"
+#      And Wait disappearance ".progress-bar"
+#  ________________
 #      And Wait appearance ".gradeA"
 #      Then See the project "ABC" in list
